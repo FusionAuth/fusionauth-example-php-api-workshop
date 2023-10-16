@@ -33,7 +33,9 @@ if ($auth_header === '') {
 // here you'd probably look things up in a database
 $allowed_api_keys = file('allowed_api_keys_hashed.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
+// DONE
 $auth_header_hashed = hash("sha256", $auth_header);
+// DONE
 
 if (!in_array($auth_header_hashed, $allowed_api_keys, true)) {
   http_response_code('401');

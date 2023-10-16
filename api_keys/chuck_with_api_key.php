@@ -32,10 +32,13 @@ if ($auth_header === '') {
 
 // here you'd probably look things up in a database
 $allowed_api_keys = file('allowed_api_keys.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+// DONE
 if (!in_array($auth_header, $allowed_api_keys, true)) {
   http_response_code('401');
   exit;
 }
+// DONE
 
 header("content-type: application/json");
 
