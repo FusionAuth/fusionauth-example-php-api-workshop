@@ -36,6 +36,10 @@ if (isset($_GET["return_all"])) {
   $return_all = htmlspecialchars($_GET["return_all"]);
 } 
 
+if ($return_all == "true") {
+  $jokes = array('jokes' => $joke_list);
+} 
+
 // here you'd probably look things up in a database
 $allowed_api_keys_raw = file('scoped_allowed_api_keys_hashed.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
