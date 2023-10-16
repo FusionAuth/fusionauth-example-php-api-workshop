@@ -19,11 +19,5 @@ $payload = array(
 
 $jwt = JWT::encode($payload, $key, 'HS256');
 print($jwt);
-print("\n\n");
-
-// Todo API
-$decoded = JWT::decode($jwt, new Key($key, 'HS256'));
-
-print_r($decoded);
 
 ?>
