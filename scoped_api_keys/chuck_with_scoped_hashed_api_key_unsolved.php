@@ -56,13 +56,7 @@ foreach ($allowed_api_keys_raw as $row) {
 $auth_header_hashed = hash("sha256", $auth_header);
 
 // set $allowed_api_keys to the list of api keys based on the operation
-// DONE
-$allowed_api_keys = $allowed_api_keys_read_one;
-
-if ($return_all == "true") {
-  $allowed_api_keys = $allowed_api_keys_read_all;
-}
-// DONE
+// TODO
 
 if (!in_array($auth_header_hashed, $allowed_api_keys, true)) {
   http_response_code('401');
