@@ -47,7 +47,7 @@ $allowed_api_keys_read_one = array();
 foreach ($allowed_api_keys_raw as $row) {
   // 44cc9621613fabd3e3d4c41445f475b106f48037c5b12ae1bc92b5581f581e69,a
   $api_key_struct = explode(",", $row);
-  if ($api_key_struct[1] == "o") {
+  if ($api_key_struct[1] == "a") {
     array_push($allowed_api_keys_read_all, $api_key_struct[0]);
   }
   array_push($allowed_api_keys_read_one, $api_key_struct[0]);
