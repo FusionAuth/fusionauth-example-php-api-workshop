@@ -7,7 +7,7 @@ use \Firebase\JWT\Key;
 require __DIR__ . '/hmac_secret.php';
 
 // User API
-$exp = time() + (60*5);
+$exp = time() + (60*10);
 $payload = array(
     "iss" => "fusionauth.io", 
     "exp" => $exp, 

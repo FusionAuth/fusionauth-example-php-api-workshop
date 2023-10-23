@@ -7,7 +7,7 @@ use \Firebase\JWT\Key;
 $key = "hello php-folk!!";
 
 // User API
-$exp = time() + (60*5);
+$exp = time() + (60*10);
 $payload = array(
     "iss" => "fusionauth.io", 
     "exp" => $exp, 
