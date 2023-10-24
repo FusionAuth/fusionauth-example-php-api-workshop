@@ -50,7 +50,7 @@ $jwt = $auth_value;
 $decoded = '';
 
 // TODO
-$jwks_url = 'https://longhornphp.fusionauth.io/.well-known/jwks.json';
+$jwks_url = '...';
 $jwks_contents = // GET CONTENTS
 // TODO
 
