@@ -11,5 +11,8 @@ http://:8001 {
 		issuer_whitelist "https://longhornphp.fusionauth.io"
 		audience_whitelist "e3c3351d-c02a-4db4-926e-748f267baa9d"
 	}
-        reverse_proxy http://localhost:8000
+        reverse_proxy http://localhost
+
+        # for local testing
+        #reverse_proxy http://localhost:8000
 }
