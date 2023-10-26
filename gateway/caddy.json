@@ -1,0 +1,15 @@
+{
+	order jwtauth before basicauth
+}
+
+
+http://:8001 {
+	jwtauth {
+		jwk_url "https://longhornphp.fusionauth.io/.well-known/jwks.json"
+		from_header "Authorization"
+		from_cookies "app.at"
+		issuer_whitelist "https://longhornphp.fusionauth.io"
+		audience_whitelist "e3c3351d-c02a-4db4-926e-748f267baa9d"
+	}
+        reverse_proxy http://localhost:8000
+}
