@@ -49,9 +49,10 @@ $jwt = $auth_value;
 
 $decoded = '';
 
+// ingest the JSON at the JWKS url
 // TODO
 $jwks_url = '...';
-$jwks_contents = // GET CONTENTS
+$jwks_contents = ''; 
 // TODO
 
 $jwks = JWK::parseKeySet(json_decode($jwks_contents,true));

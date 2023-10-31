@@ -49,6 +49,7 @@ $jwt = $auth_value;
 
 $decoded = '';
 
+// ingest the JSON at the JWKS url
 // DONE
 $jwks_url = 'https://longhornphp.fusionauth.io/.well-known/jwks.json';
 $jwks_contents = file_get_contents($jwks_url);

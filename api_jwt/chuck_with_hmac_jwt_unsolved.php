@@ -90,9 +90,10 @@ $roles = $decoded->roles;
 $can_get_one_joke = FALSE;
 $can_get_all_jokes = FALSE;
 
+// set correct rolenames
 // TODO
-$random_joke_role = "GIVE_ME_ONE_JOKE";
-$all_jokes_role = "GIVE_ME_ALL_JOKES";
+$random_joke_role = "...";
+$all_jokes_role = "...";
 // TODO
 
 if (in_array($random_joke_role, $roles)) {

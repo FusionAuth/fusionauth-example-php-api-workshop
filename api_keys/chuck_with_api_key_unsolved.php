@@ -33,6 +33,7 @@ if ($auth_header === '') {
 // here you'd probably look things up in a database
 $allowed_api_keys = file('allowed_api_keys.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
+// check to see if provided API key is in our datastory
 // TODO
 
 header("content-type: application/json");
