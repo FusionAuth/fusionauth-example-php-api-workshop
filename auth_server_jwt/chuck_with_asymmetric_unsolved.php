@@ -52,13 +52,13 @@ $decoded = '';
 // ingest the JSON at the JWKS url
 // TODO
 $jwks_url = '...';
-$jwks_contents = ''; 
+$jwks_contents = '[]';
 // TODO
 
-$jwks = JWK::parseKeySet(json_decode($jwks_contents,true));
 
 // see https://github.com/firebase/php-jwt for exception details
 try {
+  $jwks = JWK::parseKeySet(json_decode($jwks_contents,true));
   $decoded = JWT::decode($jwt, $jwks);
 } catch (InvalidArgumentException $e) {
   http_response_code('401');

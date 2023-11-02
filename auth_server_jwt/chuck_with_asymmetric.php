@@ -55,10 +55,10 @@ $jwks_url = 'https://longhornphp.fusionauth.io/.well-known/jwks.json';
 $jwks_contents = file_get_contents($jwks_url);
 // DONE
 
-$jwks = JWK::parseKeySet(json_decode($jwks_contents,true));
 
 // see https://github.com/firebase/php-jwt for exception details
 try {
+  $jwks = JWK::parseKeySet(json_decode($jwks_contents,true));
   $decoded = JWT::decode($jwt, $jwks);
 } catch (InvalidArgumentException $e) {
   http_response_code('401');
